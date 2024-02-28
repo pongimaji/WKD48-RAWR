@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -228,12 +226,16 @@
       var pembayaran_perbulan = 10000
       // =================================================== 
       $('.season_name').html(season_name)  
-      // ===================================================   
+      // ===================================================                   
       let url_saldo = generateURL(urlBase,spreadsheetId,sheetName,columnRangeSaldo,apiKey)
-      getSaldoNow(url_saldo)  
-      // ===================================================                 
       let url_pembayaran = generateURL(urlBase,spreadsheetId,sheetName,columnRangePembayaran,apiKey)
-      setTimeout(generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_perbulan),500)
+      generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_perbulan)
+        .then(() => {
+            getSaldoNow(url_saldo)
+        })
+        .catch(error => {
+            console.error('Gagal mengambil data:', error);
+        }); 
       // =================================================== 
       let url_pemasukanluar = generateURL(urlBase,spreadsheetId,sheetName,columnRangePemasukanLuar,apiKey)
       generatePemasukanLuar(url_pemasukanluar)
