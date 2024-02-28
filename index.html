@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rekap Pembayaran - WKD48 | Rp. 10.000 Menguasai Dunia Bersama WKD48</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="#" class="navbar-brand" style="margin-left: 20px;">
+      <img src="assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <span class="ml-2"><b>WKD48</b> - <span class="season_name"></span></span>
+    </a>
+  </nav>
+  
+  <main>
+
+    <div class="row" style="margin-left: 20px; margin-right: 20px;">
+
+      <section class="section dashboard" style="margin-top:20px">
+        <div class="row">
+
+            <div class="col-xl-3 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Total Peserta <span>| Terdaftar</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 class="data-count" id="txt-peserta">0</h6>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+            <div class="col-xl-3 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Saldo <span>| Saat ini</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-check-circle text-success"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 class="data-count text-success" id="txt-saldo">0</h6>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+            <div class="col-xl-3 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Belum Terkumpul <span>| Saat ini</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-exclamation-triangle text-danger"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 class="data-count text-danger" id="txt-belum-terkumpul">0</h6>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+            <div class="col-xl-3 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Perkiraan Terkumpul<span>| Dana Akhir</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-info-circle text-primary"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 class="data-count text-primary" id="txt-perkiraan">0</h6>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+        </div>
+      </section>
+
+      <section class="section dashboard">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                 <h5 class="card-title">
+                  Data Pembayaran
+                </h5>
+                <div id="table-scroll" class="table-scroll">
+                  <table class="table table-hover">
+                      <thead id="tabel-header"></thead>
+                      <tbody id="tabel-body"></tbody>
+                      <tfoot id="tabel-footer"></tfoot>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                 <h5 class="card-title">
+                  Pemasukan Dari Luar WKD48
+                </h5>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>NO</th>
+                        <th>TANGGAL</th>
+                        <th>DONATUR</th>
+                        <th>JUMLAH</th>
+                      </tr>
+                    </thead>
+                    <tbody id="body-pemasukan-luar"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                 <h5 class="card-title">
+                  Pemanfaatan Dana
+                </h5>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>NO</th>
+                        <th>TANGGAL</th>
+                        <th>KEGIATAN</th>
+                        <th>JUMLAH</th>
+                      </tr>
+                    </thead>
+                    <tbody id="body-pemanfaatan-dana"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright">
+              2024 &copy; Copyright <strong><span>WKD48</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+              <small>Lihat File <b><a href="https://docs.google.com/spreadsheets/d/1en6vCzERBl57Vbqr91YdcAqCeHYt56K-4bak6uot9RM" target="_BLANK">Google Sheet</a></b></small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/function.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // ===================================================
+      var apiKey = 'AIzaSyBJLYKczUPmd2Q9t1QRzP0elQfIjA-LCWs'
+      var spreadsheetId = '1en6vCzERBl57Vbqr91YdcAqCeHYt56K-4bak6uot9RM'
+      var urlBase = 'https://sheets.googleapis.com/v4/spreadsheets/'
+      // ===================================================
+      var season_name = 'Season 2'
+      // ===================================================
+      var startDate = new Date('2023-05-01')
+      var endDate = new Date('2024-04-01');
+      var sheetName = encodeURIComponent('2023/2024 (NOW)')
+      var columnRangeSaldo = 'C51:N51'
+      var columnRangePembayaran = 'B3:N45'
+      var columnRangePemasukanLuar = 'Q3:S46'
+      var columnRangePemanfaatanDana = 'V3:X46'
+      var pembayaran_perbulan = 10000
+      // =================================================== 
+      $('.season_name').html(season_name)  
+      // ===================================================                 
+      let url_pembayaran = generateURL(urlBase,spreadsheetId,sheetName,columnRangePembayaran,apiKey)
+      generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_perbulan)
+      // ===================================================   
+      let url_saldo = generateURL(urlBase,spreadsheetId,sheetName,columnRangeSaldo,apiKey)
+      getSaldoNow(url_saldo)  
+      // =================================================== 
+      let url_pemasukanluar = generateURL(urlBase,spreadsheetId,sheetName,columnRangePemasukanLuar,apiKey)
+      generatePemasukanLuar(url_pemasukanluar)
+      // ===================================================   
+      let url_pemanfaatandana = generateURL(urlBase,spreadsheetId,sheetName,columnRangePemanfaatanDana,apiKey)
+      generatePemanfaatanDana(url_pemanfaatandana)
+  });
+  </script>
+</body>
+
+</html>
