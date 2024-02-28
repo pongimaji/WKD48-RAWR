@@ -228,12 +228,12 @@
       var pembayaran_perbulan = 10000
       // =================================================== 
       $('.season_name').html(season_name)  
-      // ===================================================                 
-      let url_pembayaran = generateURL(urlBase,spreadsheetId,sheetName,columnRangePembayaran,apiKey)
-      generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_perbulan)
       // ===================================================   
       let url_saldo = generateURL(urlBase,spreadsheetId,sheetName,columnRangeSaldo,apiKey)
       getSaldoNow(url_saldo)  
+      // ===================================================                 
+      let url_pembayaran = generateURL(urlBase,spreadsheetId,sheetName,columnRangePembayaran,apiKey)
+      generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_perbulan)
       // =================================================== 
       let url_pemasukanluar = generateURL(urlBase,spreadsheetId,sheetName,columnRangePemasukanLuar,apiKey)
       generatePemasukanLuar(url_pemasukanluar)
