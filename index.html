@@ -233,7 +233,7 @@
       getSaldoNow(url_saldo)  
       // ===================================================                 
       let url_pembayaran = generateURL(urlBase,spreadsheetId,sheetName,columnRangePembayaran,apiKey)
-      generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_perbulan)
+      setTimeout(generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_perbulan),500)
       // =================================================== 
       let url_pemasukanluar = generateURL(urlBase,spreadsheetId,sheetName,columnRangePemasukanLuar,apiKey)
       generatePemasukanLuar(url_pemasukanluar)
