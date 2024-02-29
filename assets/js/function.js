@@ -46,11 +46,11 @@ function generateTablePembayaran(startDate,endDate,url_pembayaran,pembayaran_per
                         var angka = 0
                         var color = ''
                         if(jml!='-'){
-                            color = 'background-color:#A9E7C5;'
+                            color = 'terbayar'
                         }else{
                             belum_terkumpul+=pembayaran_perbulan
                         }
-                        html_str += '<td scope="col" style="white-space:nowrap;'+color+'" class="text-center"><b>' + jml + '</b></td>'
+                        html_str += '<td scope="col" class="text-center '+color+'"><b>' + jml + '</b></td>'
                     }
                     html_str+='</tr>'
                     tbl_body.append(html_str);
@@ -168,7 +168,7 @@ function createTableHeader(columnHeaders) {
                       '<th scope="col" class="text-center">NAMA PESERTA</th>';
     var yearColumns = {};
     columnHeaders.forEach(function(date) {
-        tableHeader += '<th scope="col" style="white-space:nowrap;background-color:#7132B2;" class="text-center">' + date['month'] + '<br><small>' + date['year'] + '</small></th>';
+        tableHeader += '<th scope="col" class="text-center">' + date['month'] + '<br><small>' + date['year'] + '</small></th>';
     });
     tableHeader += '</tr>';
     return tableHeader;
