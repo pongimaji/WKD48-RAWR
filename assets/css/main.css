@@ -19,27 +19,34 @@
 .table-scroll th,
 .table-scroll td {
   padding: 3px 10px;
+  white-space:nowrap;
   border: 1px solid #000;
   background: #fff;
   vertical-align: middle;
 }
 .table-scroll thead th {
+  white-space:nowrap;
   background: #333;
   color: #fff;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+.table-scroll .terbayar{
+  background-color:#A9E7C5;
+}
 /* safari and ios need the tfoot itself to be position:sticky also */
 .table-scroll tfoot,
 .table-scroll tfoot th,
 .table-scroll tfoot td {
+  white-space:nowrap;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  background: #666;
+  background: #333;
   color: #fff;
   z-index:4;
+
 }
 .table-scroll th:first-child {
   position: -webkit-sticky;
