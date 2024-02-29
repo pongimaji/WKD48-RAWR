@@ -12,6 +12,7 @@
   margin: auto;
   border-collapse: separate;
   border-spacing: 0;
+  font-size:12px;
 }
 .table-wrap {
   position: relative;
