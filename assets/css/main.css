@@ -19,14 +19,13 @@
 }
 .table-scroll th,
 .table-scroll td {
-  padding: 3px 10px;
   white-space:nowrap;
+  padding: 3px 10px;
   border: 1px solid #000;
   background: #fff;
   vertical-align: middle;
 }
 .table-scroll thead th {
-  white-space:nowrap;
   background: #333;
   color: #fff;
   position: -webkit-sticky;
@@ -40,7 +39,6 @@
 .table-scroll tfoot,
 .table-scroll tfoot th,
 .table-scroll tfoot td {
-  white-space:nowrap;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
