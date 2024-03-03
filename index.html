@@ -113,66 +113,63 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                 <h5 class="card-title">
-                  Data Pembayaran
-                </h5>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" style="font-size:20px;" placeholder="Ketik nama ta disini" aria-label="Search" id="searchInput">
-                </form>
-                <div id="table-scroll" class="table-scroll mt-3">
-                  <table class="table table-hover" id="myTable">
-                      <thead id="tabel-header"></thead>
-                      <tbody id="tabel-body"></tbody>
-                      <tfoot id="tabel-footer"></tfoot>
-                  </table>
+
+                <ul class="nav nav-tabs nav-tabs-bordered mt-3" id="borderedTab" role="tablist" style="font-size:14px;">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="rekap-tab" data-bs-toggle="tab" data-bs-target="#bordered-rekap" type="button" role="tab" aria-controls="rekap" aria-selected="true">Rekap</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pemasukan-tab" data-bs-toggle="tab" data-bs-target="#bordered-pemasukan" type="button" role="tab" aria-controls="pemasukan" aria-selected="false">Pemasukan</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pengeluaran-tab" data-bs-toggle="tab" data-bs-target="#bordered-pengeluaran" type="button" role="tab" aria-controls="pengeluaran" aria-selected="false">Pengeluaran</button>
+                  </li>
+                </ul>
+                <div class="tab-content pt-2" id="borderedTabContent">
+                  <div class="tab-pane fade show active" id="bordered-rekap" role="tabpanel" aria-labelledby="rekap-tab">
+                    <form class="form-inline mt-2">
+                        <input class="form-control mr-sm-2" type="search" style="font-size:20px;" placeholder="Ketik nama ta disini" aria-label="Search" id="searchInput">
+                    </form>
+                    <div id="table-scroll" class="table-scroll mt-3">
+                      <table class="table table-hover" id="myTable">
+                          <thead id="tabel-header"></thead>
+                          <tbody id="tabel-body"></tbody>
+                          <tfoot id="tabel-footer"></tfoot>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="bordered-pemasukan" role="tabpanel" aria-labelledby="pemasukan-tab">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>NO</th>
+                            <th>TANGGAL</th>
+                            <th>DONATUR</th>
+                            <th>JUMLAH</th>
+                          </tr>
+                        </thead>
+                        <tbody id="body-pemasukan-luar"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="bordered-pengeluaran" role="tabpanel" aria-labelledby="pengeluaran-tab">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>NO</th>
+                            <th>TANGGAL</th>
+                            <th>KEGIATAN</th>
+                            <th>JUMLAH</th>
+                          </tr>
+                        </thead>
+                        <tbody id="body-pemanfaatan-dana"></tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                 <h5 class="card-title">
-                  Pemasukan Dari Luar WKD48
-                </h5>
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>NO</th>
-                        <th>TANGGAL</th>
-                        <th>DONATUR</th>
-                        <th>JUMLAH</th>
-                      </tr>
-                    </thead>
-                    <tbody id="body-pemasukan-luar"></tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                 <h5 class="card-title">
-                  Pemanfaatan Dana
-                </h5>
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>NO</th>
-                        <th>TANGGAL</th>
-                        <th>KEGIATAN</th>
-                        <th>JUMLAH</th>
-                      </tr>
-                    </thead>
-                    <tbody id="body-pemanfaatan-dana"></tbody>
-                  </table>
-                </div>
               </div>
             </div>
           </div>
@@ -183,7 +180,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="copyright">
-              2024 &copy; Copyright <strong><span>WKD48</span></strong>. All Rights Reserved
+              Made with ❤ from <strong><span>SUDIANG</span></strong>. Unchhhh.<br>
+              <small>Follow us on <a href="https://instagram.com/wkd48_" target="_BLANK"><b><i class="bi bi-instagram"></i> WKD48</b></a></small>
             </div>
           </div>
         </div>
@@ -199,7 +197,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       // ===================================================
-      var apiKey = 'AIzaSyBJLYKczUPmd2Q9t1QRzP0elQfIjA-LCWs'
+      var apiKey = 'AIzaSyA6tE5WtKuHfH1N7HT9r4_qBd8Zcx23fGg'
       var spreadsheetId = '1en6vCzERBl57Vbqr91YdcAqCeHYt56K-4bak6uot9RM'
       var urlBase = 'https://sheets.googleapis.com/v4/spreadsheets/'
       // ===================================================
